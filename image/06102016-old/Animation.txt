@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Cache-Control" CONTENT="no-cache">
+<meta name="resource-type" content="Document" />
+<meta name="description" content="Sun, Weather & Climate Laboratory at NCAR" />
+<meta name="keywords" content="atmospheric research, solar research, climate change, meteorology, atmospheric chemistry, global warming, weather modeling, climate modeling" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="general">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="14 Days" />
+<meta name="copyright" content="Copyright (c) 2004 by UCAR" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<title>The Weather Research&amp;Forecasting Model Website</title>
+
+<script language="JavaScript" src="../scripts/popups.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+// <!--
+
+//============================================================
+//                >> jsImagePlayer 1.0 <<
+//            for Netscape3.0+, September 1996
+//============================================================
+//                  by (c)BASTaRT 1996
+//             Praha, Czech Republic, Europe
+//
+// feel free to copy and use as long as the credits are given
+//          by having this header in the code
+//
+//          contact: xholecko@sgi.felk.cvut.cz
+//          http://sgi.felk.cvut.cz/~xholecko
+//
+//============================================================
+// Thanx to Karel & Martin for beta testing and suggestions!
+//============================================================
+//
+//     modified by D. Watson and A. Earnhart (CIRA/CSU), 7/30/97
+//     and Greg Thompson (NCAR/RAP) May 07, 2000
+//	   
+//
+//============================================================
+//********* SET UP THESE VARIABLES - MUST BE CORRECT!!!*********************
+
+modImages = new Array();
+modImages[0] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr00.png";
+modImages[1] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr03.png";
+modImages[2] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr06.png";
+modImages[3] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr09.png";
+modImages[4] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr12.png";
+modImages[5] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr15.png";
+modImages[6] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr18.png";
+modImages[7] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr21.png";
+modImages[8] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr24.png";
+modImages[9] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr27.png";
+modImages[10] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr30.png";
+modImages[11] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr33.png";
+modImages[12] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr36.png";
+modImages[13] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr39.png";
+modImages[14] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr42.png";
+modImages[15] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr45.png";
+modImages[16] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr48.png";
+modImages[17] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr51.png";
+modImages[18] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr54.png";
+modImages[19] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr57.png";
+modImages[20] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr60.png";
+modImages[21] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr63.png";
+modImages[22] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr66.png";
+modImages[23] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr69.png";
+modImages[24] = "http://www2.mmm.ucar.edu/prod/rt/wrf/wrf20/2017010100/tarn.hr72.png";
+
+
+first_image = 0;
+last_image = 24;
+ 
+//**************************************************************************
+ 
+//=== THE CODE STARTS HERE - no need to change anything below ===
+ 
+//=== global variables ====
+theImages = new Array();      //holds the images
+imageNum = new Array();       //keeps track of which images to omit from loop
+normal_delay = 300;
+delay = normal_delay;         //delay between frames in 1/100 seconds
+delay_step = 150;
+delay_max = 6000;
+delay_min = 50;
+dwell_multipler = 3;
+dwell_step = 1;
+end_dwell_multipler   = dwell_multipler;
+start_dwell_multipler = dwell_multipler;
+current_image = first_image;     //number of the current image
+timeID = null;
+status = 0;                      // 0-stopped, 1-playing
+play_mode = 0;                   // 0-normal, 1-loop, 2-sweep
+size_valid = 0;
+ 
+//===> Make sure the first image number is not bigger than the last image number
+if (first_image > last_image)
+{
+   var help = last_image;
+   last_image = first_image;
+   first_image = help;
+}
+ 
+//===> Preload the first image (while page is downloading)
+   theImages[0] = new Image();
+   theImages[0].src = modImages[0];
+   imageNum[0] = true;
+ 
+//==============================================================
+//== All previous statements are performed as the page loads. ==
+//== The following functions are also defined at this time.   ==
+//==============================================================
+ 
+//===> Stop the animation
+function stop()
+{
+   //== cancel animation (timeID holds the expression which calls the fwd or bkwd function) ==
+   if (status == 1)
+      clearTimeout (timeID);
+   status = 0;
+}
+ 
+ 
+//===> Display animation in fwd direction in either loop or sweep mode
+function animate_fwd()
+{
+   current_image++;                      //increment image number
+ 
+   //== check if current image has exceeded loop bound ==
+   if (current_image > last_image) {
+      if (play_mode == 1) {              //fwd loop mode - skip to first image
+         current_image = first_image;
+      }
+      if (play_mode == 2) {              //sweep mode - change directions (go bkwd)
+         current_image = last_image;
+         animate_rev();
+         return;
+      }
+   }
+ 
+   //== check to ensure that current image has not been deselected from the loop ==
+   //== if it has, then find the next image that hasn't been ==
+   while (imageNum[current_image-first_image] == false) {
+         current_image++;
+         if (current_image > last_image) {
+            if (play_mode == 1)
+               current_image = first_image;
+            if (play_mode == 2) {
+               current_image = last_image;
+               animate_rev();
+               return;
+            }
+         }
+   }
+ 
+   document.animation.src = theImages[current_image-first_image].src;   //display image onto screen
+   document.control_form.frame_nr.value = current_image;                //display image number
+
+   delay_time = delay;
+   if ( current_image == first_image) delay_time = start_dwell_multipler*delay;
+   if (current_image == last_image)   delay_time = end_dwell_multipler*delay;
+ 
+   //== call "animate_fwd()" again after a set time (delay_time) has elapsed ==
+   timeID = setTimeout("animate_fwd()", delay_time);
+}
+ 
+ 
+//===> Display animation in reverse direction
+function animate_rev()
+{
+   current_image--;                      //decrement image number
+ 
+   //== check if image number is before lower loop bound ==
+   if (current_image < first_image) {
+     if (play_mode == 1) {               //rev loop mode - skip to last image
+        current_image = last_image;
+     }
+     if (play_mode == 2) {
+        current_image = first_image;     //sweep mode - change directions (go fwd)
+        animate_fwd();
+        return;
+     }
+   }
+ 
+   //== check to ensure that current image has not been deselected from the loop ==
+   //== if it has, then find the next image that hasn't been ==
+   while (imageNum[current_image-first_image] == false) {
+         current_image--;
+         if (current_image < first_image) {
+            if (play_mode == 1)
+               current_image = last_image;
+            if (play_mode == 2) {
+               current_image = first_image;
+               animate_fwd();
+               return;
+            }
+         }
+   }
+ 
+   document.animation.src = theImages[current_image-first_image].src;   //display image onto screen
+   document.control_form.frame_nr.value = current_image;                //display image number
+
+   delay_time = delay;
+   if ( current_image == first_image) delay_time = start_dwell_multipler*delay;
+   if (current_image == last_image)   delay_time = end_dwell_multipler*delay;
+ 
+   //== call "animate_rev()" again after a set amount of time (delay_time) has elapsed ==
+   timeID = setTimeout("animate_rev()", delay_time);
+}
+ 
+ 
+//===> Changes playing speed by adding to or substracting from the delay between frames
+function change_speed(dv)
+{
+   delay+=dv;
+   //== check to ensure max and min delay constraints have not been crossed ==
+   if(delay > delay_max) delay = delay_max;
+   if(delay < delay_min) delay = delay_min;
+}
+ 
+//===> functions that changed the dwell rates.
+function change_end_dwell(dv) {
+   end_dwell_multipler+=dv;
+   if ( end_dwell_multipler < 1 ) end_dwell_multipler = 0;
+   }
+ 
+function change_start_dwell(dv) {
+   start_dwell_multipler+=dv;
+   if ( start_dwell_multipler < 1 ) start_dwell_multipler = 0;
+   }
+ 
+//===> Increment to next image
+function incrementImage(number)
+{
+   stop();
+ 
+   //== if image is last in loop, increment to first image ==
+   if (number > last_image) number = first_image;
+ 
+   //== check to ensure that image has not been deselected from loop ==
+   while (imageNum[number-first_image] == false) {
+         number++;
+         if (number > last_image) number = first_image;
+   }
+ 
+   current_image = number;
+   document.animation.src = theImages[current_image-first_image].src;   //display image
+   document.control_form.frame_nr.value = current_image;                //display image number
+}
+ 
+//===> Decrement to next image
+function decrementImage(number)
+{
+   stop();
+ 
+   //== if image is first in loop, decrement to last image ==
+   if (number < first_image) number = last_image;
+ 
+   //== check to ensure that image has not been deselected from loop ==
+   while (imageNum[number-first_image] == false) {
+         number--;
+         if (number < first_image) number = last_image;
+   }
+ 
+   current_image = number;
+   document.animation.src = theImages[current_image-first_image].src;   //display image
+   document.control_form.frame_nr.value = current_image;                //display image number
+}
+ 
+//===> "Play forward"
+function fwd()
+{
+   stop();
+   status = 1;
+   play_mode = 1;
+   animate_fwd();
+}
+ 
+//===> "Play reverse"
+function rev()
+{
+   stop();
+   status = 1;
+   play_mode = 1;
+   animate_rev();
+}
+
+//===> "play sweep"
+function sweep() {
+   stop();
+   status = 1;
+   play_mode = 2;
+   animate_fwd();
+   }
+ 
+//===> Change play mode (normal, loop, swing)
+function change_mode(mode)
+{
+   play_mode = mode;
+}
+ 
+//===> Load and initialize everything once page is downloaded (called from 'onLoad' in <BODY>)
+function launch()
+{
+   for (var i = first_image + 1; i <= last_image; i++)
+   {
+      theImages[i-first_image] = new Image();
+      theImages[i-first_image].src = modImages[i-first_image];
+      imageNum[i-first_image] = true;
+      document.animation.src = theImages[i-first_image].src;
+      document.control_form.frame_nr.value = i;
+   }
+ 
+   // this needs to be done to set the right mode when the page is manually reloaded
+   change_mode (1);
+   fwd();
+}
+ 
+//===> Check selection status of image in animation loop
+function checkImage(status,i)
+{
+   if (status == true)
+      imageNum[i] = false;
+   else imageNum[i] = true;
+}
+ 
+//==> Empty function - used to deal with image buttons rather than HTML buttons
+function func()
+{
+}
+ 
+//===> Sets up interface - this is the one function called from the HTML body
+function animation()
+{
+  count = first_image;
+}
+
+// -->
+//-->
+</SCRIPT>
+<link href="animation/images/animate_styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff" onLoad="launch()">
+
+<div id="header2">
+  <table cellpadding="0" cellspacing="0" background="http://wrf-model.org/images/headerback.jpg" width="100%" id="header">
+  <tr>
+    <td width="50%" align="left" background="http://wrf-model.org/images/headerback.jpg"><a href="http://wrf-model.org/index.php"><img src="http://wrf-model.org/images/headerleft.jpg" width="512" height="69" border="0"></a></td>
+    <td width="50%" align="right" background="http://wrf-model.org/images/headerback.jpg"><img src="http://wrf-model.org/images/headerright.jpg" width="284" height="69"></td>
+  </tr>
+</table>
+</div>
+
+<div id="container">
+
+
+             <TABLE id="frame">
+			 
+               <TR>
+                   <TD valign="top" id="leftnav">
+
+                      <h1>Animation Controls</h1>
+                      <p>Play Mode:<br>
+                        <br>
+
+											<A HREF="JavaScript: func()" onClick="stop()"><IMG BORDER=0
+                       HSPACE=0 VSPACE=0 WIDTH=29 HEIGHT=24
+                       SRC="animation/images/button_stop.gif" ALT="Stop"></A><A
+                      HREF="JavaScript: func()" onClick="change_mode(1);fwd()"><IMG BORDER=0
+                       HSPACE=0 VSPACE=0 WIDTH=29 HEIGHT=24
+                       SRC="animation/images/button_fwd.gif" ALT="Fwd"></A></p>
+                      <p>Adjust Speed:<br><br>
+                          <A HREF="JavaScript: func()" onClick="change_speed(delay_step)"><IMG BORDER=0
+                       HSPACE=0 VSPACE=0 WIDTH=29 HEIGHT=24
+                       SRC="animation/images/button_slow.gif" ALT="slow"></A><A
+                      HREF="JavaScript: func()" onClick="change_speed(-delay_step)"><IMG BORDER=0
+                       HSPACE=0 VSPACE=0 WIDTH=29 HEIGHT=24
+                       SRC="animation/images/button_fast.gif" ALT="fast"></A>
+                     </p>
+				     <p>Advance One Frame:<br><br>
+					   <A HREF="JavaScript: func()" onClick="decrementImage(--current_image)"><IMG BORDER=0
+                       HSPACE=0 VSPACE=0 WIDTH=29 HEIGHT=24
+                       SRC="animation/images/button_rev1.gif" ALT="-1"></A><A HREF="JavaScript: func()" onClick="incrementImage(++current_image)"><IMG BORDER=0
+                       HSPACE=0 VSPACE=0 WIDTH=29 HEIGHT=24
+                       SRC="animation/images/button_fwd1.gif" ALT="+1"></A>
+				     </p>
+                      <FORM METHOD="POST" NAME="control_form">
+
+                         <p>Frame No:</p>
+                         <p>
+                           <INPUT TYPE="text" NAME="frame_nr" VALUE=9 SIZE="3" onFocus="this.select()" onChange="go2image(this.value)">
+                           </INPUT>
+                           <BR>&#160;                           <BR>
+                         </p>
+                      </FORM>
+					  <br>
+					  <p>Use your "BACK" button to return to the forecast page. </p>
+				         <br>
+			         <img src="../images/spacer175.gif" width="175" height="1"></TD>
+                   <TD valign="top" id="content">
+
+                      <h1>NCAR ARW WRF Forecast Animation</h1>
+					  
+                      <p><IMG NAME="animation" BORDER="0" SRC="http://wrf-model.org/plots/images/loadingimages_nest.gif"></p>
+ 
+				 </TD>
+               </tr>
+</table>
+
+
+		
+		
+<!-- end div container -->
+</div>
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31343808-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</body>
+</html>

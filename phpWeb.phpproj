@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>phpWeb</Name>
+    <ProjectGuid>3defa3ea-9494-4ecd-b2dc-08914e543c2e</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>phpWeb</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BodyIndex.php" />
+    <Compile Include="Footer.php" />
+    <Compile Include="ForecastRainfall%28GBMBasin%29.php" />
+    <Compile Include="header.php" />
+    <Compile Include="header1.php" />
+    <Compile Include="index.php" />
+    <Compile Include="InundationMapBD.php" />
+    <Compile Include="RealtimeRainfall.php" />
+    <Compile Include="StationBasedForecastNE.php" />
+    <Compile Include="StellitePredictedRainfall.php" />
+    <Compile Include="TeamMember.php" />
+    <Compile Include="Terminology.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="DataBaseNE\" />
+    <Folder Include="font\" />
+    <Folder Include="image\" />
+    <Folder Include="image\Fontpage\" />
+    <Folder Include="image\Footer\" />
+    <Folder Include="image\Logo\" />
+    <Folder Include="image\Slider\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="textFile\" />
+    <Folder Include="tooltip\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="canvasjs.min.js" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\slick.eot" />
+    <Content Include="Content\fonts\slick.svg" />
+    <Content Include="Content\fonts\slick.ttf" />
+    <Content Include="Content\fonts\slick.woff" />
+    <Content Include="Content\slick-theme.css" />
+    <Content Include="Content\slick.css" />
+    <Content Include="Content\weather-icons-wind.min.css" />
+    <Content Include="Content\weather-icons.min.css" />
+    <Content Include="CustomStyleSheet.css" />
+    <Content Include="DataBaseNE\Ajmiriganj.csv" />
+    <Content Include="DataBaseNE\Amalshid.csv" />
+    <Content Include="DataBaseNE\Austagram.csv" />
+    <Content Include="DataBaseNE\Ballah.csv" />
+    <Content Include="DataBaseNE\Derai.csv" />
+    <Content Include="DataBaseNE\Fenchuganj.csv" />
+    <Content Include="DataBaseNE\Gowainghat.csv" />
+    <Content Include="DataBaseNE\Habiganj.csv" />
+    <Content Include="DataBaseNE\Itna.csv" />
+    <Content Include="DataBaseNE\Jariajanjail.csv" />
+    <Content Include="DataBaseNE\Kalmakanda.csv" />
+    <Content Include="DataBaseNE\Kamalganj.csv" />
+    <Content Include="DataBaseNE\Kanairghat.csv" />
+    <Content Include="DataBaseNE\Khaliajuri.csv" />
+    <Content Include="DataBaseNE\Lorergarh.csv" />
+    <Content Include="DataBaseNE\Markuli.csv" />
+    <Content Include="DataBaseNE\Mohonganj.csv" />
+    <Content Include="DataBaseNE\Moulvibazar.csv" />
+    <Content Include="DataBaseNE\Nakuagaon.csv" />
+    <Content Include="DataBaseNE\Netrokona.csv" />
+    <Content Include="DataBaseNE\Sheola - Copy.csv" />
+    <Content Include="DataBaseNE\Sheola.csv" />
+    <Content Include="DataBaseNE\Sherpur.csv" />
+    <Content Include="DataBaseNE\Sunamganj.csv" />
+    <Content Include="DataBaseNE\Sutang RB.csv" />
+    <Content Include="DataBaseNE\Sylhet.csv" />
+    <Content Include="font\weathericons-regular-webfont.eot" />
+    <Content Include="font\weathericons-regular-webfont.svg" />
+    <Content Include="font\weathericons-regular-webfont.ttf" />
+    <Content Include="font\weathericons-regular-webfont.woff" />
+    <Content Include="font\weathericons-regular-webfont.woff2" />
+    <Content Include="image\bg-pattern.png" />
+    <Content Include="image\Fontpage\14845473437725.png" />
+    <Content Include="image\Fontpage\BashinManagment.png" />
+    <Content Include="image\Fontpage\BD_Rainfall.png" />
+    <Content Include="image\Fontpage\Climate.png" />
+    <Content Include="image\Fontpage\FCIDI.png" />
+    <Content Include="image\Fontpage\FlashFlood.png" />
+    <Content Include="image\Fontpage\Flood.png" />
+    <Content Include="image\Fontpage\google-place.png" />
+    <Content Include="image\Fontpage\google-placeGreen.png" />
+    <Content Include="image\Fontpage\google-placeping.png" />
+    <Content Include="image\Fontpage\google-placeYellow.png" />
+    <Content Include="image\Fontpage\libra-logo1.png" />
+    <Content Include="image\Fontpage\monsoon-clipart.png" />
+    <Content Include="image\Fontpage\MoonsoonFlood.png" />
+    <Content Include="image\Fontpage\NERM_Flash - Copy.png" />
+    <Content Include="image\Fontpage\NERM_Flash.png" />
+    <Content Include="image\Fontpage\NERM_Flash2.png" />
+    <Content Include="image\Fontpage\Tide.jpg" />
+    <Content Include="image\Fontpage\Tide.png" />
+    <Content Include="image\Fontpage\weather.png" />
+    <Content Include="image\Fontpage\wetland.jpg" />
+    <Content Include="image\Fontpage\wetland.png" />
+    <Content Include="image\Fontpage\WRFDay_1.jpg" />
+    <Content Include="image\Footer\FM.png" />
+    <Content Include="image\Footer\Rain_BD.png" />
+    <Content Include="image\Footer\rain_GBM.jpg" />
+    <Content Include="image\Logo\1458849013_7.png" />
+    <Content Include="image\Logo\2000px-Jaxa_logo.svg.png" />
+    <Content Include="image\Logo\adb.png" />
+    <Content Include="image\Logo\Army.png" />
+    <Content Include="image\Logo\badc.png" />
+    <Content Include="image\Logo\Bangladesh-Bridge-Authority.png" />
+    <Content Include="image\Logo\bangladesh-inland-water-transport-authority.png" />
+    <Content Include="image\Logo\BWDB-LOGO.png" />
+    <Content Include="image\Logo\IWMlogo.png" />
+    <Content Include="image\Logo\logoRHD.png" />
+    <Content Include="image\Logo\navy_logo.png" />
+    <Content Include="image\Slider\001-150x59.jpg" />
+    <Content Include="image\Slider\001.png" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\slick.js" />
+    <Content Include="textFile\stationPosition.txt" />
+    <Content Include="textFile\stationPositionMonsoon.txt" />
+    <Content Include="textFile\tooltip.txt" />
+    <Content Include="tooltip\tooltip.css" />
+    <Content Include="tooltip\tooltip.js" />
+  </ItemGroup>
+</Project>
